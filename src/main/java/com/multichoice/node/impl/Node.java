@@ -1,10 +1,11 @@
-package com.multichoice.node;
+package com.multichoice.node.impl;
 
 import java.util.ArrayList;
 
 import com.multichoice.enums.NodeType;
+import com.multichoice.node.INode;
 import com.multichoice.node.coordinate.ICoordinate;
-import com.multichoice.node.coordinate.XYCoordinate;
+import com.multichoice.node.coordinate.impl.XYCoordinate;
 
 public class Node implements INode {
 	private Node north;
@@ -26,10 +27,6 @@ public class Node implements INode {
 
 	protected Node() {
 
-	}
-
-	public Node getWest() {
-		return west;
 	}
 
 	public void setWest(Node west) {

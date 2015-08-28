@@ -1,4 +1,6 @@
-package com.multichoice.node.coordinate;
+package com.multichoice.node.coordinate.impl;
+
+import com.multichoice.node.coordinate.ICoordinate;
 
 /**
  * @author Jebil Kuruvila

@@ -1,8 +1,10 @@
-package com.multichoice.node;
+package com.multichoice.node.impl;
 
 import com.multichoice.constants.Constants;
 import com.multichoice.enums.NodeType;
-import com.multichoice.node.coordinate.XYCoordinate;
+import com.multichoice.node.INode;
+import com.multichoice.node.INodeFactory;
+import com.multichoice.node.coordinate.impl.XYCoordinate;
 
 public class NodeFactory implements INodeFactory {
 	Node node;
@@ -45,6 +47,14 @@ public class NodeFactory implements INodeFactory {
 		node.setCoordinate(coordinate);
 		node.setCost(cost);
 		node.setType(NodeType.OTHER);
+		return node;
+	}
+
+	public INode newNode(int... coordinates) {
+		node = new Node();
+		coordinate = new XYCoordinate();
+		coordinate.setCoordinates(coordinates);
+		node.setCoordinate(coordinate);
 		return node;
 	}
 
