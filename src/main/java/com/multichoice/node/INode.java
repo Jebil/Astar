@@ -8,7 +8,7 @@ import com.multichoice.node.coordinate.ICoordinate;
 public interface INode extends Comparable<INode> {
 	public NodeType getType();
 
-	public void setType();
+	public void setType(NodeType type);
 
 	public ICoordinate getCoordinates();
 
@@ -30,9 +30,13 @@ public interface INode extends Comparable<INode> {
 
 	public float getCostFromStart();
 
-	public void setCostFromStart(float costFronStart);
+	public void setCostFromStart(float costFromStart);
 
 	public boolean equals(INode node);
 
 	public int compareTo(INode otherNode);
+
+	public int getCost();
+
+	public void setCost(int cost);
 }
