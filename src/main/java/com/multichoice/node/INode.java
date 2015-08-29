@@ -1,20 +1,18 @@
 package com.multichoice.node;
 
-import java.util.ArrayList;
-
 import com.multichoice.enums.NodeType;
 import com.multichoice.node.coordinate.ICoordinate;
 
 public interface INode extends Comparable<INode> {
 	public NodeType getType();
 
-	public void setType(NodeType type);
+	// public void setType(NodeType type);
 
 	public ICoordinate getCoordinates();
 
-	public void setCoordinate(ICoordinate coordinate);
+	// public void setCoordinate(ICoordinate coordinate);
 
-	public ArrayList<INode> getNeighborList();
+	// public ArrayList<INode> getNeighborList();
 
 	public boolean isVisited();
 
@@ -38,5 +36,5 @@ public interface INode extends Comparable<INode> {
 
 	public int getCost();
 
-	public void setCost(int cost);
+	// public void setCost(int cost);
 }

@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import com.multichoice.node.coordinate.impl.XYCoordinate;
 
-public class CoordianteTest {
+public class CoordinateTest {
 	@Test
 	public void checkXYCoordinates() {
 		XYCoordinate coordinate = new XYCoordinate();

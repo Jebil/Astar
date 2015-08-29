@@ -1,13 +1,9 @@
 package com.multichoice.node;
 
+import com.multichoice.enums.NodeType;
+import com.multichoice.node.coordinate.impl.XYCoordinate;
+
 public interface INodeFactory {
-	public INode newStartNode(int... coordinates);
 
-	public INode newNode(int... coordinates);
-
-	public INode newObstacleNode(int... coordinates);
-
-	public INode newGoalNode(int... coordinates);
-
-	public INode newOtherNode(int cost, int... coordinates);
+	public INode createNode(XYCoordinate coordinate, int cost, NodeType type);
 }

@@ -23,6 +23,11 @@ public class XYCoordinate implements ICoordinate {
 		return this;
 	}
 
+	public XYCoordinate(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+
 	public void setCoordinates(int... x) {
 		this.x = x[0];
 		this.y = x[1];
