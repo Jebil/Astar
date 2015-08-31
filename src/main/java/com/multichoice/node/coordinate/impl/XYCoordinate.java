@@ -43,4 +43,9 @@ public class XYCoordinate implements ICoordinate {
 		}
 		return false;
 	}
+
+	@Override
+	public String toString() {
+		return "X=" + this.x + ", Y=" + this.y;
+	}
 }

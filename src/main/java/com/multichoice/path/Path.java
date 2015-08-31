@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import com.multichoice.node.INode;
 import com.multichoice.node.coordinate.impl.XYCoordinate;
 
+/**
+ * @author Jebil Kuruvila
+ *
+ */
 public class Path {
 	// The waypoints in the path (list of coordiantes making up the path)
 	private ArrayList<INode> waypoints = new ArrayList<INode>();

@@ -5,6 +5,10 @@ import com.multichoice.node.INode;
 import com.multichoice.node.coordinate.ICoordinate;
 import com.multichoice.node.coordinate.impl.XYCoordinate;
 
+/**
+ * @author Jebil Kuruvila
+ *
+ */
 public class Node implements INode {
 	// private Node north;
 	// private Node northEast;
@@ -19,7 +23,7 @@ public class Node implements INode {
 	private NodeType type;
 	private XYCoordinate coordinate;
 
-	private boolean isVisited;
+	// private boolean isVisited;
 	private INode previousNode;
 	private float heuristicCostFromGoal;
 	private float costFromStart;
@@ -28,6 +32,7 @@ public class Node implements INode {
 		this.coordinate = coordinate;
 		this.cost = cost;
 		this.type = type;
+		this.costFromStart = Integer.MAX_VALUE;
 	}
 
 	// public void setWest(Node west) {
@@ -101,11 +106,11 @@ public class Node implements INode {
 	// public void setType(NodeType type) {
 	// this.type = type;
 	// }
-	
+
 	// public void setCoordinate(ICoordinate coordinate) {
 	// this.coordinate = (XYCoordinate) coordinate;
 	// }
-	
+
 	public NodeType getType() {
 		return type;
 	}
@@ -114,13 +119,13 @@ public class Node implements INode {
 		return coordinate;
 	}
 
-	public boolean isVisited() {
-		return isVisited;
-	}
-
-	public void setVisited(boolean visited) {
-		this.isVisited = visited;
-	}
+	// public boolean isVisited() {
+	// return isVisited;
+	// }
+	//
+	// public void setVisited(boolean visited) {
+	// this.isVisited = visited;
+	// }
 
 	public INode getPreviousNode() {
 		return previousNode;
