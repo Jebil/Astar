@@ -7,35 +7,39 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.apache.log4j.Logger;
+
 /**
  * @author Jebil Kuruvila
  *
  *         Wrapper for all the file operations.
  */
 public class ReadFile {
+	private static Logger logger = Logger.getLogger(ReadFile.class);
 	/**
 	 * Get the file path of our executable jar file. During development it will
 	 * be the target folder.
 	 */
-	static File jarPath = new File(ReadFile.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+	private static File jarPath = new File(
+			ReadFile.class.getProtectionDomain().getCodeSource().getLocation().getPath());
 
 	/**
 	 * Extract the path as String
 	 */
-	static String filePath = jarPath.getParentFile().getAbsolutePath();
+	private static String filePath = jarPath.getParentFile().getAbsolutePath();
 
 	/**
 	 * Temporary String for reading from file.
 	 */
-	static String temp;
+	private static String temp;
 	/**
 	 * Default file name for input file.
 	 */
-	static String fileInName = "/map.txt";
+	private static String fileInName = "/map.txt";
 	/**
 	 * Default file name for output file.
 	 */
-	static String fileOutName = "/map-out.txt";
+	private static String fileOutName = "/map-out.txt";
 
 	/**
 	 * @return
@@ -44,16 +48,18 @@ public class ReadFile {
 	 *             a two dimensional array format for better accessing as x,y
 	 *             coordinates.
 	 */
-	public static char[][] getFileAsCharArray() throws IOException {
-
-		return getFileAsCharArray(filePath + fileInName);
-	}
+	// public static char[][] getFileAsCharArray() throws IOException {
+	//
+	// return getFileAsCharArray(filePath + fileInName);
+	// }
 
 	public static char[][] getFileAsCharArray(String file) throws IOException {
 		File f;
 		if (null != file) {
 			f = new File(file);
+			logger.debug("Trying to read given file " + f.getName());
 		} else {
+			logger.debug("No file specified in command line arguments, trying default file name map.txt");
 			f = new File(filePath + fileInName);
 		}
 		int pos = f.getName().lastIndexOf(".");
@@ -102,13 +108,14 @@ public class ReadFile {
 		try {
 			fw = new FileWriter(file);
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.debug(e.getMessage());
 		}
+		logger.debug("Writing to file out/" + file.getName());
 		return fw;
 	}
 
-	public static File getOutputFile() {
-		return new File(filePath + File.separator + fileOutName);
-	}
+	// public static File getOutputFile() {
+	// return new File(filePath + File.separator + fileOutName);
+	// }
 
 }

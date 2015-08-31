@@ -12,13 +12,13 @@ import com.multichoice.node.coordinate.impl.XYCoordinate;
  *         formula |x1 - x2| + |y1 - y2|
  */
 public class ManhattanHeuristic implements IAStarHeuristic {
-
 	int startX, startY, goalX, goalY;
 
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.multichoice.astar.AStarHeuristic#getEstimatedDistanceToGoal(com.
+	 * @see
+	 * com.multichoice.astar.IAStarHeuristic#getEstimatedDistanceToGoal(com.
 	 * multichoice.node.coordinate.ICoordinate,
 	 * com.multichoice.node.coordinate.ICoordinate)
 	 */
@@ -30,6 +30,9 @@ public class ManhattanHeuristic implements IAStarHeuristic {
 		return (Math.abs(startX - goalX) + Math.abs(startY - goalY));
 	}
 
+	/**
+	 * Making the constructor available only for factory.
+	 */
 	protected ManhattanHeuristic() {
 	}
 }

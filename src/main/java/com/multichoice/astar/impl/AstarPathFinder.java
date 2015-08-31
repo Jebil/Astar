@@ -5,9 +5,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import org.apache.log4j.Logger;
+
 import com.multichoice.astar.IAStarHeuristic;
 import com.multichoice.astar.IPathFinder;
 import com.multichoice.enums.NodeType;
+import com.multichoice.exceptions.NoPathFoundException;
 import com.multichoice.exceptions.NodeException;
 import com.multichoice.file.ReadFile;
 import com.multichoice.map.IAreaMap;
@@ -28,6 +31,7 @@ public class AstarPathFinder implements IPathFinder {
 	private SortedNodeList openList;
 	private Path shortestPath;
 	private float estimatedDistanceToGoal;
+	private static Logger logger = Logger.getLogger(AstarPathFinder.class);
 
 	/**
 	 * @param map
@@ -37,6 +41,8 @@ public class AstarPathFinder implements IPathFinder {
 	 *            heuristic function.
 	 */
 	protected AstarPathFinder(IAreaMap map, IAStarHeuristic heuristic) {
+		logger.debug(
+				"Creating instance of AstarPathFinder. With heuristic function as " + heuristic.getClass().getName());
 		this.map = map;
 		this.heuristic = heuristic;
 		closedList = new ArrayList<INode>();
@@ -92,6 +98,10 @@ public class AstarPathFinder implements IPathFinder {
 				}
 			}
 		}
+		if (shortestPath == null) {
+			logger.debug("No solution found.");
+			throw new NoPathFoundException();
+		}
 
 		return shortestPath;
 
@@ -121,15 +131,16 @@ public class AstarPathFinder implements IPathFinder {
 	 * @throws Exception
 	 */
 	private Path reconstructPath(INode node) throws NodeException {
+		logger.debug("Goal node found, constructing the path.");
 		map.clear();
-		// int cost = 0;
+		int cost = 0;
 		Path path = new Path();
 		while (!(node.getPreviousNode() == null)) {
-			// cost += node.getCost();
+			cost += node.getCost();
 			path.prependWayPoint(node);
 			node = node.getPreviousNode();
 		}
-		// System.out.println(cost);
+		logger.debug("Cost for this path is " + cost);
 		this.shortestPath = path;
 		return path;
 	}

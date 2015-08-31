@@ -1,0 +1,21 @@
+2015-08-31 12:58:14 INFO  RunAstar:45 - Creating areaMap via factory method
+2015-08-31 12:58:14 ERROR RunAstar:64 - C:\Users\Home\workspace\Astar\jar\map.txt (The system cannot find the file specified)
+2015-08-31 12:58:39 INFO  RunAstar:45 - Creating areaMap via factory method
+2015-08-31 12:58:39 INFO  RunAstar:51 - Creating heuiristic function via factory method.
+2015-08-31 12:58:39 INFO  RunAstar:54 - Creating pathFinder via factory method.
+2015-08-31 12:58:39 INFO  RunAstar:57 - Calculating shortest path.
+2015-08-31 12:58:39 INFO  RunAstar:60 - Printing the path.
+2015-08-31 13:06:02 DEBUG RunAstar:39 - Inside main function
+2015-08-31 13:06:02 DEBUG RunAstar:45 - Creating areaMap via factory method
+2015-08-31 13:06:02 DEBUG RunAstar:48 - Setting diagonalMovementAllowed as true
+2015-08-31 13:06:02 DEBUG RunAstar:51 - Creating heuiristic function via factory method.
+2015-08-31 13:06:02 DEBUG RunAstar:54 - Creating pathFinder via factory method.
+2015-08-31 13:06:02 DEBUG RunAstar:57 - Calculating shortest path.
+2015-08-31 13:06:02 DEBUG RunAstar:60 - Printing the path.
+2015-08-31 13:06:48 DEBUG RunAstar:39 - Inside main function
+2015-08-31 13:06:48 DEBUG RunAstar:45 - Creating areaMap via factory method
+2015-08-31 13:06:48 DEBUG RunAstar:48 - Setting diagonalMovementAllowed as false
+2015-08-31 13:06:48 DEBUG RunAstar:51 - Creating heuiristic function via factory method.
+2015-08-31 13:06:48 DEBUG RunAstar:54 - Creating pathFinder via factory method.
+2015-08-31 13:06:48 DEBUG RunAstar:57 - Calculating shortest path.
+2015-08-31 13:06:48 DEBUG RunAstar:60 - Printing the path.

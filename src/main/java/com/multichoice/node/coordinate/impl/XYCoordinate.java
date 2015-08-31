@@ -33,6 +33,11 @@ public class XYCoordinate implements ICoordinate {
 		this.y = x[1];
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (obj.getClass() == XYCoordinate.class) {

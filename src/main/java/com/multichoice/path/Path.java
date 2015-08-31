@@ -8,6 +8,7 @@ import com.multichoice.node.coordinate.impl.XYCoordinate;
 /**
  * @author Jebil Kuruvila
  *
+ *         Type used to hold the path.
  */
 public class Path {
 	// The waypoints in the path (list of coordiantes making up the path)

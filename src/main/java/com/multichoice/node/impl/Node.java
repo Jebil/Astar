@@ -7,7 +7,8 @@ import com.multichoice.node.coordinate.impl.XYCoordinate;
 
 /**
  * @author Jebil Kuruvila
- *
+ * 
+ *         Implementation of the type Node in two dimension.
  */
 public class Node implements INode {
 	// private Node north;
@@ -28,6 +29,12 @@ public class Node implements INode {
 	private float heuristicCostFromGoal;
 	private float costFromStart;
 
+	/**
+	 * @param coordinate
+	 * @param cost
+	 * @param type
+	 * 
+	 */
 	protected Node(XYCoordinate coordinate, int cost, NodeType type) {
 		this.coordinate = coordinate;
 		this.cost = cost;
@@ -158,6 +165,11 @@ public class Node implements INode {
 		return false;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.multichoice.node.INode#compareTo(com.multichoice.node.INode)
+	 */
 	public int compareTo(INode otherNode) {
 		float thisTotalDistanceFromGoal = heuristicCostFromGoal + costFromStart;
 		float otherTotalDistanceFromGoal = otherNode.getHeuristicCostFromGoal() + otherNode.getCostFromStart();

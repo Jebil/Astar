@@ -36,6 +36,7 @@ public class RunAstar {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		log.debug("Inside main function");
 		areaMapFactory = new AreaMapFactory();
 		astarFactory = new PathFinderFactory();
 		heuristicFactory = new HeuristicFactory();
@@ -43,18 +44,21 @@ public class RunAstar {
 		try {
 			map = areaMapFactory.createAreaMap(ReadFile.getFileAsCharArray(inputFile));
 
+			log.debug("Setting diagonalMovementAllowed as " + allowDiagonal);
 			map.allowDiagonalMovement(allowDiagonal);
 
 			IAStarHeuristic heuristic = heuristicFactory.createHeuristic(Constants.ManhattanHeuristic);
 
 			IPathFinder pathFinder = astarFactory.createPathFinder(Constants.AstarAlgorithm, map, heuristic);
 
+			log.debug("Calculating shortest path.");
 			pathFinder.calcShortestPath();
 
+			log.debug("Printing the path.");
 			pathFinder.printPath();
 
 		} catch (NodeException | IOException e) {
-			e.printStackTrace();
+			log.error(e.getMessage());
 		}
 	}
 

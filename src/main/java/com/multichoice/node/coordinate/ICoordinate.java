@@ -3,6 +3,8 @@ package com.multichoice.node.coordinate;
 /**
  * @author Jebil Kuruvila
  *
+ * 
+ *         Type for holding the coordinates of the Node.
  */
 public interface ICoordinate {
 	/**

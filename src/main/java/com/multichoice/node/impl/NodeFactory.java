@@ -9,6 +9,7 @@ import com.multichoice.node.coordinate.impl.XYCoordinate;
 /**
  * @author Jebil Kuruvila
  *
+ *         Implementation of NodeFactory.
  */
 public class NodeFactory implements INodeFactory {
 	Node node;

@@ -6,10 +6,14 @@ import com.multichoice.node.coordinate.ICoordinate;
 /**
  * @author Jebil Kuruvila
  *
+ *
+ *         Type for storing each tile data in the map
  */
 public interface INode extends Comparable<INode> {
 	/**
 	 * @return
+	 * 
+	 * 		Gets the type of tile (Obstacle, Start, Goal, Other)
 	 */
 	public NodeType getType();
 
@@ -30,6 +34,8 @@ public interface INode extends Comparable<INode> {
 
 	/**
 	 * @return
+	 * 
+	 * 		Reference to the previous node to maintain the path
 	 */
 	public INode getPreviousNode();
 
@@ -40,6 +46,7 @@ public interface INode extends Comparable<INode> {
 
 	/**
 	 * @return
+	 * 
 	 */
 	public float getHeuristicCostFromGoal();
 

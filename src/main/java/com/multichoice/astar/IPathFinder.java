@@ -8,6 +8,8 @@ import com.multichoice.path.Path;
 /**
  * @author Jebil Kuruvila
  *
+ *
+ *         Prototype for path finding algorithm.
  */
 public interface IPathFinder {
 	/**

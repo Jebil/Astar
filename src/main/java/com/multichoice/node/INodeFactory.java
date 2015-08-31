@@ -5,7 +5,8 @@ import com.multichoice.node.coordinate.ICoordinate;
 
 /**
  * @author Jebil Kuruvila
- *
+ * 
+ *         Factory prototype for NodeFactory
  */
 public interface INodeFactory {
 

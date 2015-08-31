@@ -8,11 +8,13 @@ import com.multichoice.node.coordinate.ICoordinate;
 
 /**
  * @author Jebil Kuruvila
- *
+ * 
+ * 
+ *         Prototype for the AreaMap.
  */
 public interface IAreaMap {
 	/**
-	 * @throws NodeException 
+	 * @throws NodeException
 	 * 
 	 */
 	public void createMap() throws NodeException;
@@ -45,7 +47,7 @@ public interface IAreaMap {
 	public INode getGoalNode();
 
 	/**
-	 * @throws NodeException 
+	 * @throws NodeException
 	 * 
 	 */
 	public void clear() throws NodeException;
@@ -55,7 +57,7 @@ public interface IAreaMap {
 	 * @param node2
 	 * @return
 	 */
-//	public float getDistanceBetween(INode node1, INode node2);
+	// public float getDistanceBetween(INode node1, INode node2);
 
 	/**
 	 * @return

@@ -5,6 +5,8 @@ import com.multichoice.map.IAreaMap;
 /**
  * @author Jebil Kuruvila
  *
+ *
+ *         Factory for generating path finder algorithms.
  */
 public interface IPathFinderFactory {
 	/**

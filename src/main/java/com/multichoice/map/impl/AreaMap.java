@@ -2,6 +2,8 @@ package com.multichoice.map.impl;
 
 import java.util.ArrayList;
 
+import org.apache.log4j.Logger;
+
 import com.multichoice.constants.Constants;
 import com.multichoice.enums.NodeType;
 import com.multichoice.exceptions.MultipleGoalNodesFoundException;
@@ -31,11 +33,13 @@ public class AreaMap implements IAreaMap {
 	private XYCoordinate coordinate;
 	private int x, y;
 	private boolean allowDiagonalMovement = true;
+	private static Logger logger = Logger.getLogger(AreaMap.class);
 
 	protected AreaMap(char[][] obstacleMap) throws NodeException {
 		this.mapWidth = obstacleMap.length;
 		this.mapHeight = obstacleMap[0].length;
 		this.obstacleMap = obstacleMap;
+		logger.debug("Creating new instance of AreaMap with map width as " + mapWidth + " and height as " + mapHeight);
 		createMap();
 	}
 

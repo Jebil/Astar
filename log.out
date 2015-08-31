@@ -1,0 +1,129 @@
+2015-08-31 13:04:20 DEBUG RunAstar:39 - Inside main function
+2015-08-31 13:04:20 DEBUG RunAstar:45 - Creating areaMap via factory method
+2015-08-31 13:04:20 DEBUG RunAstar:48 - Setting diagonalMovementAllowed as true
+2015-08-31 13:04:20 DEBUG RunAstar:51 - Creating heuiristic function via factory method.
+2015-08-31 13:04:20 DEBUG RunAstar:54 - Creating pathFinder via factory method.
+2015-08-31 13:04:20 DEBUG RunAstar:57 - Calculating shortest path.
+2015-08-31 13:04:20 DEBUG RunAstar:60 - Printing the path.
+2015-08-31 13:11:48 DEBUG RunAstar:39 - Inside main function
+2015-08-31 13:11:48 DEBUG RunAstar:45 - Creating areaMap via factory method
+2015-08-31 13:11:48 DEBUG RunAstar:48 - Setting diagonalMovementAllowed as true
+2015-08-31 13:11:48 DEBUG RunAstar:51 - Creating heuiristic function via factory method.
+2015-08-31 13:11:48 DEBUG RunAstar:54 - Creating pathFinder via factory method.
+2015-08-31 13:11:48 DEBUG AstarPathFinder:43 - Creating instance of AstarPathFinder. With heuristic function as com.multichoice.astar.impl.ManhattanHeuristic
+2015-08-31 13:11:48 DEBUG RunAstar:57 - Calculating shortest path.
+2015-08-31 13:11:48 DEBUG RunAstar:60 - Printing the path.
+2015-08-31 13:14:01 DEBUG RunAstar:39 - Inside main function
+2015-08-31 13:14:01 DEBUG RunAstar:45 - Creating areaMap via factory method
+2015-08-31 13:14:01 DEBUG RunAstar:48 - Setting diagonalMovementAllowed as true
+2015-08-31 13:14:01 DEBUG RunAstar:51 - Creating heuiristic function via factory method.
+2015-08-31 13:14:01 DEBUG RunAstar:54 - Creating pathFinder via factory method.
+2015-08-31 13:14:01 DEBUG AstarPathFinder:43 - Creating instance of AstarPathFinder. With heuristic function as com.multichoice.astar.impl.ManhattanHeuristic
+2015-08-31 13:14:01 DEBUG RunAstar:57 - Calculating shortest path.
+2015-08-31 13:14:01 DEBUG RunAstar:60 - Printing the path.
+2015-08-31 13:15:15 DEBUG RunAstar:39 - Inside main function
+2015-08-31 13:15:15 DEBUG RunAstar:45 - Creating areaMap via factory method
+2015-08-31 13:15:15 DEBUG RunAstar:48 - Setting diagonalMovementAllowed as true
+2015-08-31 13:15:15 DEBUG RunAstar:51 - Creating heuiristic function via factory method.
+2015-08-31 13:15:15 DEBUG RunAstar:54 - Creating pathFinder via factory method.
+2015-08-31 13:15:15 DEBUG AstarPathFinder:43 - Creating instance of AstarPathFinder. With heuristic function as com.multichoice.astar.impl.ManhattanHeuristic
+2015-08-31 13:15:15 DEBUG RunAstar:57 - Calculating shortest path.
+2015-08-31 13:15:15 DEBUG AstarPathFinder:100 - 
+2015-08-31 13:15:15 DEBUG RunAstar:60 - Printing the path.
+2015-08-31 13:16:06 DEBUG RunAstar:39 - Inside main function
+2015-08-31 13:16:06 DEBUG RunAstar:45 - Creating areaMap via factory method
+2015-08-31 13:16:06 DEBUG RunAstar:48 - Setting diagonalMovementAllowed as true
+2015-08-31 13:16:06 DEBUG RunAstar:51 - Creating heuiristic function via factory method.
+2015-08-31 13:16:06 DEBUG RunAstar:54 - Creating pathFinder via factory method.
+2015-08-31 13:16:06 DEBUG AstarPathFinder:43 - Creating instance of AstarPathFinder. With heuristic function as com.multichoice.astar.impl.ManhattanHeuristic
+2015-08-31 13:16:06 DEBUG RunAstar:57 - Calculating shortest path.
+2015-08-31 13:16:06 DEBUG AstarPathFinder:100 - true
+2015-08-31 13:16:06 DEBUG RunAstar:60 - Printing the path.
+2015-08-31 13:19:49 DEBUG RunAstar:39 - Inside main function
+2015-08-31 13:19:49 DEBUG RunAstar:45 - Creating areaMap via factory method
+2015-08-31 13:19:49 DEBUG RunAstar:48 - Setting diagonalMovementAllowed as true
+2015-08-31 13:19:49 DEBUG RunAstar:51 - Creating heuiristic function via factory method.
+2015-08-31 13:19:49 DEBUG RunAstar:54 - Creating pathFinder via factory method.
+2015-08-31 13:19:49 DEBUG AstarPathFinder:44 - Creating instance of AstarPathFinder. With heuristic function as com.multichoice.astar.impl.ManhattanHeuristic
+2015-08-31 13:19:49 DEBUG RunAstar:57 - Calculating shortest path.
+2015-08-31 13:19:49 DEBUG AstarPathFinder:102 - No solution found.
+2015-08-31 13:19:49 ERROR RunAstar:64 - Path to goal could not be found.
+2015-08-31 13:29:53 DEBUG RunAstar:39 - Inside main function
+2015-08-31 13:29:53 DEBUG RunAstar:45 - Creating areaMap via factory method
+2015-08-31 13:29:53 DEBUG RunAstar:48 - Setting diagonalMovementAllowed as true
+2015-08-31 13:29:53 DEBUG RunAstar:51 - Creating heuiristic function via factory method.
+2015-08-31 13:29:53 DEBUG HeuristicFactory:23 - Creating instance of com.multichoice.astar.impl.ManhattanHeuristic Using HeuristicFactory method
+2015-08-31 13:29:53 DEBUG RunAstar:54 - Creating pathFinder via factory method.
+2015-08-31 13:29:53 DEBUG AstarPathFinder:44 - Creating instance of AstarPathFinder. With heuristic function as com.multichoice.astar.impl.ManhattanHeuristic
+2015-08-31 13:29:53 DEBUG PathFinderFactory:26 - Creating new instance of com.multichoice.astar.impl.AstarPathFinder Using PathFinderFactory
+2015-08-31 13:29:53 DEBUG RunAstar:57 - Calculating shortest path.
+2015-08-31 13:29:53 DEBUG AstarPathFinder:102 - No solution found.
+2015-08-31 13:29:53 ERROR RunAstar:64 - Path to goal could not be found.
+2015-08-31 13:34:45 DEBUG RunAstar:39 - Inside main function
+2015-08-31 13:34:45 DEBUG RunAstar:45 - Creating areaMap via factory method
+2015-08-31 13:34:45 DEBUG ReadFile:62 - No file specified in as command line arguments, trying default file name map.txt
+2015-08-31 13:34:45 DEBUG RunAstar:48 - Setting diagonalMovementAllowed as true
+2015-08-31 13:34:45 DEBUG RunAstar:51 - Creating heuiristic function via factory method.
+2015-08-31 13:34:45 DEBUG HeuristicFactory:23 - Creating instance of com.multichoice.astar.impl.ManhattanHeuristic Using HeuristicFactory method
+2015-08-31 13:34:45 DEBUG RunAstar:54 - Creating pathFinder via factory method.
+2015-08-31 13:34:45 DEBUG AstarPathFinder:44 - Creating instance of AstarPathFinder. With heuristic function as com.multichoice.astar.impl.ManhattanHeuristic
+2015-08-31 13:34:45 DEBUG PathFinderFactory:26 - Creating new instance of com.multichoice.astar.impl.AstarPathFinder Using PathFinderFactory
+2015-08-31 13:34:45 DEBUG RunAstar:57 - Calculating shortest path.
+2015-08-31 13:34:45 DEBUG AstarPathFinder:102 - No solution found.
+2015-08-31 13:34:45 ERROR RunAstar:64 - Path to goal could not be found.
+2015-08-31 13:51:18 DEBUG RunAstar:39 - Inside main function
+2015-08-31 13:51:18 DEBUG RunAstar:45 - Creating areaMap via factory method
+2015-08-31 13:51:18 DEBUG ReadFile:62 - No file specified in command line arguments, trying default file name map.txt
+2015-08-31 13:51:18 DEBUG AreaMapFactory:15 - Creating new AreaMap via AreaMapFactory.
+2015-08-31 13:51:18 DEBUG AreaMap:42 - Creating new instance of AreaMap with map width as 5 and height as 5
+2015-08-31 13:51:18 DEBUG AreaMap:47 - Inside AreaMap.createMap() 
+2015-08-31 13:51:18 DEBUG RunAstar:48 - Setting diagonalMovementAllowed as true
+2015-08-31 13:51:18 DEBUG RunAstar:51 - Creating heuiristic function via factory method.
+2015-08-31 13:51:18 DEBUG HeuristicFactory:23 - Creating instance of com.multichoice.astar.impl.ManhattanHeuristic Using HeuristicFactory method
+2015-08-31 13:51:18 DEBUG RunAstar:54 - Creating pathFinder via factory method.
+2015-08-31 13:51:18 DEBUG AstarPathFinder:44 - Creating instance of AstarPathFinder. With heuristic function as com.multichoice.astar.impl.ManhattanHeuristic
+2015-08-31 13:51:18 DEBUG PathFinderFactory:26 - Creating new instance of com.multichoice.astar.impl.AstarPathFinder Using PathFinderFactory
+2015-08-31 13:51:18 DEBUG RunAstar:57 - Calculating shortest path.
+2015-08-31 13:51:18 DEBUG AstarPathFinder:102 - No solution found.
+2015-08-31 13:51:18 ERROR RunAstar:64 - Path to goal could not be found.
+2015-08-31 13:53:38 DEBUG RunAstar:39 - Inside main function
+2015-08-31 13:53:38 DEBUG ReadFile:62 - No file specified in command line arguments, trying default file name map.txt
+2015-08-31 13:53:38 DEBUG AreaMapFactory:15 - Creating new AreaMap via AreaMapFactory.
+2015-08-31 13:53:38 DEBUG AreaMap:42 - Creating new instance of AreaMap with map width as 50 and height as 50
+2015-08-31 13:53:38 DEBUG AreaMap:47 - Inside AreaMap.createMap() 
+2015-08-31 13:53:38 DEBUG RunAstar:47 - Setting diagonalMovementAllowed as true
+2015-08-31 13:53:38 DEBUG HeuristicFactory:23 - Creating instance of com.multichoice.astar.impl.ManhattanHeuristic Using HeuristicFactory method
+2015-08-31 13:53:38 DEBUG AstarPathFinder:44 - Creating instance of AstarPathFinder. With heuristic function as com.multichoice.astar.impl.ManhattanHeuristic
+2015-08-31 13:53:38 DEBUG PathFinderFactory:26 - Creating new instance of com.multichoice.astar.impl.AstarPathFinder Using PathFinderFactory
+2015-08-31 13:53:38 DEBUG RunAstar:54 - Calculating shortest path.
+2015-08-31 13:53:38 DEBUG AstarPathFinder:134 - Goal node found, constructing the path.
+2015-08-31 13:53:38 DEBUG AreaMap:47 - Inside AreaMap.createMap() 
+2015-08-31 13:53:38 DEBUG AstarPathFinder:143 - Cost for this path is 96
+2015-08-31 13:53:38 DEBUG RunAstar:57 - Printing the path.
+2015-08-31 13:53:38 DEBUG ReadFile:113 - Writing to file map-out.txt
+2015-08-31 13:54:15 DEBUG RunAstar:39 - Inside main function
+2015-08-31 13:54:15 DEBUG ReadFile:62 - No file specified in command line arguments, trying default file name map.txt
+2015-08-31 13:54:15 DEBUG AreaMapFactory:15 - Creating new AreaMap via AreaMapFactory.
+2015-08-31 13:54:15 DEBUG AreaMap:42 - Creating new instance of AreaMap with map width as 50 and height as 50
+2015-08-31 13:54:15 DEBUG RunAstar:47 - Setting diagonalMovementAllowed as true
+2015-08-31 13:54:15 DEBUG HeuristicFactory:23 - Creating instance of com.multichoice.astar.impl.ManhattanHeuristic Using HeuristicFactory method
+2015-08-31 13:54:15 DEBUG AstarPathFinder:44 - Creating instance of AstarPathFinder. With heuristic function as com.multichoice.astar.impl.ManhattanHeuristic
+2015-08-31 13:54:15 DEBUG PathFinderFactory:26 - Creating new instance of com.multichoice.astar.impl.AstarPathFinder Using PathFinderFactory
+2015-08-31 13:54:15 DEBUG RunAstar:54 - Calculating shortest path.
+2015-08-31 13:54:15 DEBUG AstarPathFinder:134 - Goal node found, constructing the path.
+2015-08-31 13:54:15 DEBUG AstarPathFinder:143 - Cost for this path is 96
+2015-08-31 13:54:15 DEBUG RunAstar:57 - Printing the path.
+2015-08-31 13:54:15 DEBUG ReadFile:113 - Writing to file map-out.txt
+2015-08-31 13:54:48 DEBUG RunAstar:39 - Inside main function
+2015-08-31 13:54:48 DEBUG ReadFile:62 - No file specified in command line arguments, trying default file name map.txt
+2015-08-31 13:54:48 DEBUG AreaMapFactory:15 - Creating new AreaMap via AreaMapFactory.
+2015-08-31 13:54:48 DEBUG AreaMap:42 - Creating new instance of AreaMap with map width as 50 and height as 50
+2015-08-31 13:54:48 DEBUG RunAstar:47 - Setting diagonalMovementAllowed as true
+2015-08-31 13:54:48 DEBUG HeuristicFactory:23 - Creating instance of com.multichoice.astar.impl.ManhattanHeuristic Using HeuristicFactory method
+2015-08-31 13:54:48 DEBUG AstarPathFinder:44 - Creating instance of AstarPathFinder. With heuristic function as com.multichoice.astar.impl.ManhattanHeuristic
+2015-08-31 13:54:48 DEBUG PathFinderFactory:26 - Creating new instance of com.multichoice.astar.impl.AstarPathFinder Using PathFinderFactory
+2015-08-31 13:54:48 DEBUG RunAstar:54 - Calculating shortest path.
+2015-08-31 13:54:48 DEBUG AstarPathFinder:134 - Goal node found, constructing the path.
+2015-08-31 13:54:48 DEBUG AstarPathFinder:143 - Cost for this path is 96
+2015-08-31 13:54:48 DEBUG RunAstar:57 - Printing the path.
+2015-08-31 13:54:48 DEBUG ReadFile:113 - Writing to file out/map-out.txt
