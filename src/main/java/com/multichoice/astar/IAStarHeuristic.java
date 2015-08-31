@@ -11,7 +11,7 @@ import com.multichoice.node.coordinate.ICoordinate;
  * 
  *         Used to calculate estimated distance between two nodes.
  */
-public interface AStarHeuristic {
+public interface IAStarHeuristic {
 	/**
 	 * @param start
 	 * @param goal

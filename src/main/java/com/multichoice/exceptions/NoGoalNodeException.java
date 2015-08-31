@@ -4,7 +4,7 @@ package com.multichoice.exceptions;
  * @author Jebil Kuruvila
  *
  */
-public class NoGoalNodeException extends Exception {
+public class NoGoalNodeException extends NodeException {
 	/**
 	 * 
 	 */

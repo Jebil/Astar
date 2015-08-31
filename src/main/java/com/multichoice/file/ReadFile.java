@@ -27,11 +27,11 @@ public class ReadFile {
 	/**
 	 * Temporary String for reading from file.
 	 */
-	String temp;
+	static String temp;
 	/**
 	 * Default file name for input file.
 	 */
-	String fileInName = "/map.txt";
+	static String fileInName = "/map.txt";
 	/**
 	 * Default file name for output file.
 	 */
@@ -44,13 +44,22 @@ public class ReadFile {
 	 *             a two dimensional array format for better accessing as x,y
 	 *             coordinates.
 	 */
-	public char[][] getFileAsCharArray() throws IOException {
-		File f = new File(filePath + File.separator + fileInName);
-		return getFileAsCharArray(f);
+	public static char[][] getFileAsCharArray() throws IOException {
+
+		return getFileAsCharArray(filePath + fileInName);
 	}
 
-	public char[][] getFileAsCharArray(File f) throws IOException {
-//		fileOutName = f.getName(). + "-out";
+	public static char[][] getFileAsCharArray(String file) throws IOException {
+		File f;
+		if (null != file) {
+			f = new File(file);
+		} else {
+			f = new File(filePath + fileInName);
+		}
+		int pos = f.getName().lastIndexOf(".");
+		if (pos > 0) {
+			fileOutName = f.getName().substring(0, pos) + "-out.txt";
+		}
 		FileReader fr = new FileReader(f);
 		BufferedReader br = new BufferedReader(fr);
 		// ArrayList to temporarily store the data.
@@ -88,7 +97,7 @@ public class ReadFile {
 	}
 
 	public static FileWriter getFileWriter(String fileOutName) {
-		File file = new File(filePath + File.separator + fileOutName);
+		File file = new File(filePath + "/out" + File.separator + fileOutName);
 		FileWriter fw = null;
 		try {
 			fw = new FileWriter(file);
@@ -98,8 +107,8 @@ public class ReadFile {
 		return fw;
 	}
 
-	public static File getOutputFile(){
-		return  new File(filePath + File.separator + fileOutName);
+	public static File getOutputFile() {
+		return new File(filePath + File.separator + fileOutName);
 	}
 
 }

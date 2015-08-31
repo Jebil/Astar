@@ -14,4 +14,6 @@ public class Constants {
 	public static int costForest = 2;
 	public static int costMountain = 3;
 	public static char pathSymbol = '#';
+	public static String AstarAlgorithm = "astar";
+	public static String ManhattanHeuristic = "manhattan";
 }

@@ -2,6 +2,7 @@ package com.multichoice.map;
 
 import java.util.ArrayList;
 
+import com.multichoice.exceptions.NodeException;
 import com.multichoice.node.INode;
 import com.multichoice.node.coordinate.ICoordinate;
 
@@ -11,10 +12,10 @@ import com.multichoice.node.coordinate.ICoordinate;
  */
 public interface IAreaMap {
 	/**
-	 * @throws Exception 
+	 * @throws NodeException 
 	 * 
 	 */
-	public void createMap() throws Exception;
+	public void createMap() throws NodeException;
 
 	/**
 	 * @param node
@@ -44,10 +45,10 @@ public interface IAreaMap {
 	public INode getGoalNode();
 
 	/**
-	 * @throws Exception 
+	 * @throws NodeException 
 	 * 
 	 */
-	public void clear() throws Exception;
+	public void clear() throws NodeException;
 
 	/**
 	 * @param node1

@@ -2,11 +2,20 @@ package com.multichoice;
 
 import java.io.IOException;
 
-import com.multichoice.astar.AStarHeuristic;
-import com.multichoice.astar.Astar;
-import com.multichoice.astar.DistanceHeuristic;
+import org.apache.log4j.Logger;
+
+import com.multichoice.astar.IAStarHeuristic;
+import com.multichoice.astar.IHeuristicFactory;
+import com.multichoice.astar.IPathFinder;
+import com.multichoice.astar.IPathFinderFactory;
+import com.multichoice.astar.impl.HeuristicFactory;
+import com.multichoice.astar.impl.PathFinderFactory;
+import com.multichoice.constants.Constants;
+import com.multichoice.exceptions.NodeException;
 import com.multichoice.file.ReadFile;
-import com.multichoice.map.impl.AreaMap;
+import com.multichoice.map.IAreaMap;
+import com.multichoice.map.IAreaMapFactory;
+import com.multichoice.map.impl.AreaMapFactory;
 
 /**
  * @author Jebil Kuruvila
@@ -15,23 +24,47 @@ import com.multichoice.map.impl.AreaMap;
  *         Main class for running the program.
  */
 public class RunAstar {
+	private static IAreaMapFactory areaMapFactory;
+	private static IAreaMap map;
+	private static IPathFinderFactory astarFactory;
+	private static IHeuristicFactory heuristicFactory;
+	private static String inputFile = null;
+	private static boolean allowDiagonal = true;
+	static Logger log = Logger.getLogger(RunAstar.class.getName());
+
 	/**
 	 * @param args
-	 * @throws IOException
 	 */
-	public static void main(String[] args) throws Exception {
-		ReadFile readFile = new ReadFile();
+	public static void main(String[] args) {
+		areaMapFactory = new AreaMapFactory();
+		astarFactory = new PathFinderFactory();
+		heuristicFactory = new HeuristicFactory();
+		readArgs(args);
+		try {
+			map = areaMapFactory.createAreaMap(ReadFile.getFileAsCharArray(inputFile));
 
-		AreaMap map = new AreaMap(readFile.getFileAsCharArray());
+			map.allowDiagonalMovement(allowDiagonal);
 
-		map.allowDiagonalMovement(true);
+			IAStarHeuristic heuristic = heuristicFactory.createHeuristic(Constants.ManhattanHeuristic);
 
-		AStarHeuristic heuristic = new DistanceHeuristic();
+			IPathFinder pathFinder = astarFactory.createPathFinder(Constants.AstarAlgorithm, map, heuristic);
 
-		Astar pathFinder = new Astar(map, heuristic);
+			pathFinder.calcShortestPath();
 
-		pathFinder.calcShortestPath();
+			pathFinder.printPath();
 
-		pathFinder.printPath();
+		} catch (NodeException | IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static void readArgs(String[] args) {
+		for (int i = 0; i < args.length; i++) {
+			if (args[i].equalsIgnoreCase("-f")) {
+				inputFile = args[i + 1];
+			} else if (args[i].equalsIgnoreCase("-d")) {
+				allowDiagonal = false;
+			}
+		}
 	}
 }

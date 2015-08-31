@@ -4,7 +4,7 @@ package com.multichoice.exceptions;
  * @author Jebil Kuruvila
  *
  */
-public class NoStartNodeException extends Exception {
+public class NoStartNodeException extends NodeException {
 	/**
 	 * 
 	 */

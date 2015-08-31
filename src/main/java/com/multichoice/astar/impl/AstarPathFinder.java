@@ -1,13 +1,16 @@
-package com.multichoice.astar;
+package com.multichoice.astar.impl;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import com.multichoice.astar.IAStarHeuristic;
+import com.multichoice.astar.IPathFinder;
 import com.multichoice.enums.NodeType;
+import com.multichoice.exceptions.NodeException;
 import com.multichoice.file.ReadFile;
-import com.multichoice.map.impl.AreaMap;
+import com.multichoice.map.IAreaMap;
 import com.multichoice.node.INode;
 import com.multichoice.node.coordinate.impl.XYCoordinate;
 import com.multichoice.path.Path;
@@ -18,9 +21,9 @@ import com.multichoice.path.Path;
  *
  *         Responsible for calculating the shortest path.
  */
-public class Astar {
-	private AreaMap map;
-	private AStarHeuristic heuristic;
+public class AstarPathFinder implements IPathFinder {
+	private IAreaMap map;
+	private IAStarHeuristic heuristic;
 	private ArrayList<INode> closedList;
 	private SortedNodeList openList;
 	private Path shortestPath;
@@ -33,7 +36,7 @@ public class Astar {
 	 *            Constructor method to initialize and setting the desired
 	 *            heuristic function.
 	 */
-	public Astar(AreaMap map, AStarHeuristic heuristic) {
+	protected AstarPathFinder(IAreaMap map, IAStarHeuristic heuristic) {
 		this.map = map;
 		this.heuristic = heuristic;
 		closedList = new ArrayList<INode>();
@@ -44,9 +47,9 @@ public class Astar {
 	 * @return
 	 * 
 	 * 		Method to calculate the shortest and low cost path.
-	 * @throws Exception 
+	 * @throws NodeException
 	 */
-	public Path calcShortestPath() throws Exception {
+	public Path calcShortestPath() throws NodeException {
 		map.getStartNode().setCostFromStart(0);
 		closedList.clear();
 		openList.clear();
@@ -115,9 +118,9 @@ public class Astar {
 	 * 
 	 * 		Method to construct the path on finding the goal node traversing
 	 *         from the start node.
-	 * @throws Exception 
+	 * @throws Exception
 	 */
-	private Path reconstructPath(INode node) throws Exception {
+	private Path reconstructPath(INode node) throws NodeException {
 		map.clear();
 		// int cost = 0;
 		Path path = new Path();

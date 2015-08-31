@@ -7,6 +7,7 @@ import com.multichoice.enums.NodeType;
 import com.multichoice.exceptions.MultipleGoalNodesFoundException;
 import com.multichoice.exceptions.MultipleStartNodesFoundException;
 import com.multichoice.exceptions.NoStartNodeException;
+import com.multichoice.exceptions.NodeException;
 import com.multichoice.map.IAreaMap;
 import com.multichoice.node.INode;
 import com.multichoice.node.INodeFactory;
@@ -31,14 +32,14 @@ public class AreaMap implements IAreaMap {
 	private int x, y;
 	private boolean allowDiagonalMovement = true;
 
-	public AreaMap(char[][] obstacleMap) throws Exception {
+	protected AreaMap(char[][] obstacleMap) throws NodeException {
 		this.mapWidth = obstacleMap.length;
 		this.mapHeight = obstacleMap[0].length;
 		this.obstacleMap = obstacleMap;
 		createMap();
 	}
 
-	public void createMap() throws Exception {
+	public void createMap() throws NodeException {
 		INode node = null;
 		map = new ArrayList<ArrayList<INode>>();
 		nodeFactory = new NodeFactory();
@@ -125,7 +126,7 @@ public class AreaMap implements IAreaMap {
 		return map.get(goalLocation.getX()).get(goalLocation.getY());
 	}
 
-	public void clear() throws Exception {
+	public void clear() throws NodeException {
 		startLocation = null;
 		goalLocation = null;
 		createMap();
