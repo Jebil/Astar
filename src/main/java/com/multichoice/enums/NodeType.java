@@ -7,5 +7,5 @@ package com.multichoice.enums;
  *
  */
 public enum NodeType {
-	START, GOAL, OBSTACLE, OTHER
+	START, GOAL, OBSTACLE, FLATLAND, FOREST, MOUNTAIN
 }

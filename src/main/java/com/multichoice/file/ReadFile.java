@@ -99,6 +99,10 @@ public class ReadFile {
 	}
 
 	public static FileWriter getFileWriter(String fileOutName) {
+		File dir = new File(filePath + "/out");
+		if (!dir.exists()) {
+			dir.mkdir();
+		}
 		File file = new File(filePath + "/out" + File.separator + fileOutName);
 		FileWriter fw = null;
 		try {

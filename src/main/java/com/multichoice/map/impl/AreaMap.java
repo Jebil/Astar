@@ -73,7 +73,7 @@ public class AreaMap implements IAreaMap {
 					node = nodeFactory.createNode(new XYCoordinate(x, y), 0, NodeType.OBSTACLE);
 					break;
 				case flatLand:
-					node = nodeFactory.createNode(new XYCoordinate(x, y), Constants.costFlatland, NodeType.OTHER);
+					node = nodeFactory.createNode(new XYCoordinate(x, y), Constants.costFlatland, NodeType.FLATLAND);
 					break;
 				case startNode:
 					if (null != startLocation)
@@ -88,10 +88,10 @@ public class AreaMap implements IAreaMap {
 					node = nodeFactory.createNode(goalLocation, Constants.costFlatland, NodeType.GOAL);
 					break;
 				case forestNode:
-					node = nodeFactory.createNode(new XYCoordinate(x, y), Constants.costForest, NodeType.OTHER);
+					node = nodeFactory.createNode(new XYCoordinate(x, y), Constants.costForest, NodeType.FOREST);
 					break;
 				case mountain:
-					node = nodeFactory.createNode(new XYCoordinate(x, y), Constants.costMountain, NodeType.OTHER);
+					node = nodeFactory.createNode(new XYCoordinate(x, y), Constants.costMountain, NodeType.MOUNTAIN);
 					break;
 				}
 				map.get(x).add(node);

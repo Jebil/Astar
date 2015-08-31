@@ -18,11 +18,11 @@ public class NodeTest {
 	@Test
 	public void checkNodeFactory() {
 		factory = new NodeFactory();
-		node = factory.createNode(new XYCoordinate(5, 5), 2, NodeType.OTHER);
+		node = factory.createNode(new XYCoordinate(5, 5), 2, NodeType.FOREST);
 		assertNotNull(node);
 		assertEquals(node.getCoordinates(), new XYCoordinate(5, 5));
 		assertEquals(node.getCost(), 2);
-		assertEquals(node.getType(), NodeType.OTHER);
+		assertEquals(node.getType(), NodeType.FOREST);
 	}
 
 }

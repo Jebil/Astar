@@ -65,7 +65,6 @@ public class AstarPathFinder implements IPathFinder {
 			// get the first Node from non-searched Node list, sorted by lowest
 			// distance from our goal as guessed by our heuristic
 			INode current = openList.getFirst();
-
 			// check if our current Node location is the goal Node. If it is, we
 			// are done.
 			if (current.getCoordinates().equals(map.getGoalNode().getCoordinates())) {
@@ -90,10 +89,11 @@ public class AstarPathFinder implements IPathFinder {
 					float neighborCostFromStart = (current.getCostFromStart() + neighbor.getCost());
 					// add neighbor to the open list if it is not there
 					if (!openList.contains(neighbor)) {
-						openList.add(neighbor);
+
 						setNeighbourParams(current, neighbor, neighborCostFromStart);
 						// if neighbor is closer to start it could also be
 						// better
+						openList.add(neighbor);
 					} else if (neighborCostFromStart < current.getCostFromStart()) {
 						// set neighbors parameters if it is better
 						setNeighbourParams(current, neighbor, neighborCostFromStart);
@@ -126,7 +126,7 @@ public class AstarPathFinder implements IPathFinder {
 		estimatedDistanceToGoal = heuristic.getEstimatedDistanceToGoal(neighbor.getCoordinates(),
 				map.getGoalNode().getCoordinates());
 		// Set the heuristic cost to the neighbor.
-		neighbor.setHeuristicCostFromGoal(estimatedDistanceToGoal + neighbor.getCost());
+		neighbor.setHeuristicCostFromGoal(estimatedDistanceToGoal);
 	}
 
 	/**
@@ -161,10 +161,11 @@ public class AstarPathFinder implements IPathFinder {
 	public void printPath() throws IOException {
 		FileWriter fw = ReadFile.getFileWriter();
 		INode node;
+		XYCoordinate coordinate = new XYCoordinate(0, 0);
 		for (int x = 0; x < map.getMapWidth(); x++) {
 			for (int y = 0; y < map.getMapHeight(); y++) {
-
-				node = map.getNode(new XYCoordinate(x, y));
+				coordinate.setCoordinates(x, y);
+				node = map.getNode(coordinate);
 
 				if (node.getType().equals(NodeType.OBSTACLE)) {
 					fw.write(obstacleNode);
@@ -175,17 +176,17 @@ public class AstarPathFinder implements IPathFinder {
 				} else if (node.getType().equals(NodeType.GOAL)) {
 					fw.write(pathSymbol);
 					System.out.print(pathSymbol);
-				} else if (shortestPath.contains(new XYCoordinate(x, y))) {
+				} else if (shortestPath.contains(coordinate)) {
 					fw.write(pathSymbol);
 					System.out.print(pathSymbol);
 				} else {
-					if (node.getCost() == costFlatland) {
+					if (node.getType().equals(NodeType.FLATLAND)) {
 						fw.write(flatLand);
 						System.out.print(flatLand);
-					} else if (node.getCost() == costForest) {
+					} else if (node.getType().equals(NodeType.FOREST)) {
 						fw.write(forestNode);
 						System.out.print(forestNode);
-					} else if (node.getCost() == costMountain) {
+					} else if (node.getType().equals(NodeType.MOUNTAIN)) {
 						fw.write(mountain);
 						System.out.print(mountain);
 					}
