@@ -7,6 +7,7 @@ use an equation that takes into account the distance from the tile to the goal a
 Equation used in this implementation is |x1 - x2| + |y1 - y2|
 
 You can clone it and import as existing maven project into your IDE (preferably Eclipse)
+(Copy the jar\map.txt file into target folder)
 
 #Features of this implementation 
 
