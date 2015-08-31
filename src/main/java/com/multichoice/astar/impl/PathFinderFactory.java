@@ -29,7 +29,7 @@ public class PathFinderFactory implements IPathFinderFactory {
 		if (arg.equalsIgnoreCase(Constants.ASTAR_ALGORITHM)) {
 			pathFinder = new AstarPathFinder(map, heuristic);
 		}
-		LOGGER.debug("Creating new instance of " + pathFinder.getClass().getName() + " Using PathFinderFactory");
+		LOGGER.debug("Creating new instance of " + "AstarPathFinder" + " Using PathFinderFactory");
 		return pathFinder;
 	}
 

@@ -69,7 +69,7 @@ public class ReadFile {
 		while (br.ready()) {
 			temp = br.readLine();
 			// To eliminate blank lines.
-			if (!(temp.trim().equals(""))) {
+			if ((null != temp) && !(temp.trim().equals(""))) {
 				list.add(temp.toCharArray());
 			}
 		}

@@ -41,13 +41,18 @@ public class XYCoordinate implements ICoordinate {
 	 */
 	@Override
 	public boolean equals(Object obj) {
-		if (obj.getClass() == XYCoordinate.class) {
+		if ((null != obj) && obj.getClass() == XYCoordinate.class) {
 			XYCoordinate coord = (XYCoordinate) obj;
 			if (this.x == coord.getX() && this.y == coord.getY()) {
 				return true;
 			}
 		}
 		return false;
+	}
+
+	@Override
+	public int hashCode() {
+		return super.hashCode();
 	}
 
 	@Override
