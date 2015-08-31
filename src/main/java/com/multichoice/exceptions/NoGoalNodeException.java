@@ -5,9 +5,7 @@ package com.multichoice.exceptions;
  *
  */
 public class NoGoalNodeException extends NodeException {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = -8318014721585175292L;
 
 	public NoGoalNodeException() {

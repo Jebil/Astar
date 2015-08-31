@@ -17,20 +17,10 @@ public interface INode extends Comparable<INode> {
 	 */
 	public NodeType getType();
 
-	// public void setType(NodeType type);
-
 	/**
 	 * @return
 	 */
 	public ICoordinate getCoordinates();
-
-	// public void setCoordinate(ICoordinate coordinate);
-
-	// public ArrayList<INode> getNeighborList();
-
-	// public boolean isVisited();
-
-	// public void setVisited(boolean visited);
 
 	/**
 	 * @return
@@ -83,5 +73,4 @@ public interface INode extends Comparable<INode> {
 	 */
 	public int getCost();
 
-	// public void setCost(int cost);
 }

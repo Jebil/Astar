@@ -6,9 +6,6 @@ package com.multichoice.exceptions;
  */
 public class MultipleStartNodesFoundException extends NodeException {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -5646336136918578371L;
 
 	public MultipleStartNodesFoundException() {

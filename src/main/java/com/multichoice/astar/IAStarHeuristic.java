@@ -12,10 +12,7 @@ import com.multichoice.node.coordinate.ICoordinate;
  *         Used to calculate estimated distance between two nodes.
  */
 public interface IAStarHeuristic {
-	/**
-	 * @param start
-	 * @param goal
-	 * @return
-	 */
+
 	public float getEstimatedDistanceToGoal(ICoordinate start, ICoordinate goal);
+
 }

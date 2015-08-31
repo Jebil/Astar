@@ -5,9 +5,7 @@ package com.multichoice.exceptions;
  *
  */
 public class NoStartNodeException extends NodeException {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 747223154776075032L;
 
 	public NoStartNodeException() {

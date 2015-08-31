@@ -1,9 +1,7 @@
 package com.multichoice.exceptions;
 
 public class NoPathFoundException extends NodeException {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 2154159317451418153L;
 
 	public NoPathFoundException() {

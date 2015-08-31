@@ -5,9 +5,7 @@ package com.multichoice.exceptions;
  *
  */
 public class MultipleGoalNodesFoundException extends NodeException {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 5072292477149541059L;
 
 	public MultipleGoalNodesFoundException() {

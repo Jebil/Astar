@@ -53,13 +53,6 @@ public interface IAreaMap {
 	public void clear() throws NodeException;
 
 	/**
-	 * @param node1
-	 * @param node2
-	 * @return
-	 */
-	// public float getDistanceBetween(INode node1, INode node2);
-
-	/**
 	 * @return
 	 */
 	public int getMapWidth();

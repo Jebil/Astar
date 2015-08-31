@@ -7,9 +7,7 @@ package com.multichoice.astar;
  *         Factory for creating Heuiristic functions.
  */
 public interface IHeuristicFactory {
-	/**
-	 * @param arg
-	 * @return
-	 */
+
 	public IAStarHeuristic createHeuristic(String arg);
+
 }

@@ -48,11 +48,6 @@ public class ReadFile {
 	 *             a two dimensional array format for better accessing as x,y
 	 *             coordinates.
 	 */
-	// public static char[][] getFileAsCharArray() throws IOException {
-	//
-	// return getFileAsCharArray(filePath + fileInName);
-	// }
-
 	public static char[][] getFileAsCharArray(String file) throws IOException {
 		File f;
 		if (null != file) {
@@ -113,9 +108,5 @@ public class ReadFile {
 		logger.debug("Writing to file out/" + file.getName());
 		return fw;
 	}
-
-	// public static File getOutputFile() {
-	// return new File(filePath + File.separator + fileOutName);
-	// }
 
 }

@@ -136,18 +136,6 @@ public class AreaMap implements IAreaMap {
 		createMap();
 	}
 
-	// public float getDistanceBetween(INode node1, INode node2) {
-	// XYCoordinate node1Coordinates = (XYCoordinate) node1.getCoordinates();
-	// XYCoordinate node2Coordinates = (XYCoordinate) node2.getCoordinates();
-	// // if the nodes are on top or next to each other
-	// if (node1Coordinates.getX() == node2Coordinates.getX() ||
-	// node1Coordinates.getY() == node2Coordinates.getY()) {
-	// return 1 * (mapHeight + mapWidth);
-	// } else { // if they are diagonal to each other return diagonal distance:
-	// return (float) 1.7 * (mapHeight + mapWidth);
-	// }
-	// }
-
 	public int getMapWidth() {
 		return mapWidth;
 	}

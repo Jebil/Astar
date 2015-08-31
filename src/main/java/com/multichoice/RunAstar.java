@@ -32,9 +32,6 @@ public class RunAstar {
 	private static boolean allowDiagonal = true;
 	static Logger log = Logger.getLogger(RunAstar.class.getName());
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		log.debug("Inside main function");
 		areaMapFactory = new AreaMapFactory();
