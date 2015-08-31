@@ -26,10 +26,10 @@ public class RunAstar {
 	private static IPathFinderFactory astarFactory;
 	private static String inputFile = null;
 	private static boolean allowDiagonal = true;
-	static Logger log = Logger.getLogger(RunAstar.class.getName());
+	private static Logger LOGGER = Logger.getLogger(RunAstar.class.getName());
 
 	public static void main(String[] args) {
-		log.debug("Inside main function");
+		LOGGER.debug("Inside main function");
 		astarFactory = new PathFinderFactory();
 		readArgs(args); // Read the command line arguments to load inputFile
 						// name and allowDiagonal indicator.
@@ -38,7 +38,7 @@ public class RunAstar {
 			// and allowDiagonal flag
 			map = new AreaMap(ReadFile.getFileAsCharArray(inputFile), allowDiagonal);
 
-			log.debug("Setting diagonalMovementAllowed as " + allowDiagonal);
+			LOGGER.debug("Setting diagonalMovementAllowed as " + allowDiagonal);
 
 			// Create the instance of the required heuristic function.
 			IAStarHeuristic heuristic = new ManhattanHeuristic();
@@ -46,19 +46,19 @@ public class RunAstar {
 			// Create the instance of path finder algorithm
 			IPathFinder pathFinder = astarFactory.createPathFinder(Constants.AstarAlgorithm, map, heuristic);
 
-			log.debug("Calculating shortest path.");
+			LOGGER.debug("Calculating shortest path.");
 			pathFinder.calcShortestPath();
 
-			log.debug("Printing the path.");
+			LOGGER.debug("Printing the path.");
 			pathFinder.printPath();
 
 		} catch (NodeException e) {
-			log.error(e.getMessage());
+			LOGGER.error(e.getMessage());
 		} catch (IOException e) {
-			log.error(e.getMessage());
-			log.error("Please run as java -jar ${jar file name} [OPTIONS]");
-			log.error("Append -f ${file} to specify the file or it'll search for map.txt in the same folder.");
-			log.error("Append -d to prevent diagonal movement.");
+			LOGGER.error(e.getMessage());
+			LOGGER.error("Please run as java -jar ${jar file name} [OPTIONS]");
+			LOGGER.error("Append -f ${file} to specify the file or it'll search for map.txt in the same folder.");
+			LOGGER.error("Append -d to prevent diagonal movement.");
 		}
 	}
 

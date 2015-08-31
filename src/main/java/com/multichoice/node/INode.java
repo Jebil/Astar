@@ -35,6 +35,9 @@ public interface INode extends Comparable<INode> {
 	public void setPreviousNode(INode previousNode);
 
 	/**
+	 * Get the estimatedDistance to goal as calculated using heuristic function
+	 * plus cost of that node.
+	 * 
 	 * @return
 	 * 
 	 */

@@ -16,7 +16,7 @@ import org.apache.log4j.Logger;
  *
  */
 public class ReadFile {
-	private static Logger logger = Logger.getLogger(ReadFile.class);
+	private static Logger LOGGER = Logger.getLogger(ReadFile.class);
 	/**
 	 * Get the file path of our executable jar file. During development it will
 	 * be the target folder.
@@ -53,9 +53,9 @@ public class ReadFile {
 		File f;
 		if (null != file) {
 			f = new File(file);
-			logger.debug("Trying to read given file " + f.getName());
+			LOGGER.debug("Trying to read given file " + f.getName());
 		} else {
-			logger.debug("No file specified in command line arguments, trying default file name map.txt");
+			LOGGER.debug("No file specified in command line arguments, trying default file name map.txt");
 			f = new File(filePath + fileInName);
 		}
 		int pos = f.getName().lastIndexOf(".");
@@ -104,9 +104,9 @@ public class ReadFile {
 		try {
 			fw = new FileWriter(file);
 		} catch (IOException e) {
-			logger.debug(e.getMessage());
+			LOGGER.debug(e.getMessage());
 		}
-		logger.debug("Writing to file out/" + file.getName());
+		LOGGER.debug("Writing to file out/" + file.getName());
 		return fw;
 	}
 

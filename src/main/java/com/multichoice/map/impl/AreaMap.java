@@ -37,7 +37,7 @@ public class AreaMap implements IAreaMap {
 	private XYCoordinate coordinate;
 	private int x, y;
 	private boolean allowDiagonalMovement = true;
-	private static Logger logger = Logger.getLogger(AreaMap.class);
+	private static Logger LOGGER = Logger.getLogger(AreaMap.class);
 
 	/**
 	 * @param charArray
@@ -52,7 +52,7 @@ public class AreaMap implements IAreaMap {
 		this.mapHeight = charArray[0].length;
 		this.charMap = charArray;
 		this.allowDiagonalMovement = diagonalMovement;
-		logger.debug("Creating new instance of AreaMap with map width as " + mapWidth + " and height as " + mapHeight);
+		LOGGER.debug("Creating new instance of AreaMap with map width as " + mapWidth + " and height as " + mapHeight);
 		createMap();
 	}
 

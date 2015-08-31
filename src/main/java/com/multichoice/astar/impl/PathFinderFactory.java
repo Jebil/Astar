@@ -16,13 +16,13 @@ import com.multichoice.map.IAreaMap;
  */
 public class PathFinderFactory implements IPathFinderFactory {
 	private IPathFinder pathFinder;
-	private static Logger logger = Logger.getLogger(PathFinderFactory.class);
+	private static Logger LOGGER = Logger.getLogger(PathFinderFactory.class);
 
 	public IPathFinder createPathFinder(String arg, IAreaMap map, IAStarHeuristic heuristic) {
 		if (arg.equalsIgnoreCase(Constants.AstarAlgorithm)) {
 			pathFinder = new AstarPathFinder(map, heuristic);
 		}
-		logger.debug("Creating new instance of " + pathFinder.getClass().getName() + " Using PathFinderFactory");
+		LOGGER.debug("Creating new instance of " + pathFinder.getClass().getName() + " Using PathFinderFactory");
 		return pathFinder;
 	}
 

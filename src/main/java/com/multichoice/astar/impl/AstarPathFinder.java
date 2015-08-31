@@ -31,7 +31,7 @@ public class AstarPathFinder implements IPathFinder {
 	private SortedNodeList openList;
 	private Path shortestPath;
 	private float estimatedDistanceToGoal;
-	private static Logger logger = Logger.getLogger(AstarPathFinder.class);
+	private static Logger LOGGER = Logger.getLogger(AstarPathFinder.class);
 
 	/**
 	 * @param map
@@ -41,7 +41,7 @@ public class AstarPathFinder implements IPathFinder {
 	 *            desired heuristic function.
 	 */
 	protected AstarPathFinder(IAreaMap map, IAStarHeuristic heuristic) {
-		logger.debug(
+		LOGGER.debug(
 				"Creating instance of AstarPathFinder. With heuristic function as " + heuristic.getClass().getName());
 		this.map = map;
 		this.heuristic = heuristic;
@@ -102,7 +102,7 @@ public class AstarPathFinder implements IPathFinder {
 			}
 		}
 		if (shortestPath == null) {
-			logger.debug("No solution found.");
+			LOGGER.debug("No solution found.");
 			throw new NoPathFoundException();
 		}
 
@@ -138,7 +138,7 @@ public class AstarPathFinder implements IPathFinder {
 	 * @throws Exception
 	 */
 	private Path reconstructPath(INode node) throws NodeException {
-		logger.debug("Goal node found, constructing the path.");
+		LOGGER.debug("Goal node found, constructing the path.");
 		map.clear();
 		int cost = 0;
 		// New path instance.
@@ -148,7 +148,7 @@ public class AstarPathFinder implements IPathFinder {
 			path.prependWayPoint(node);
 			node = node.getPreviousNode();
 		}
-		logger.debug("Cost for this path is " + cost);
+		LOGGER.debug("Cost for this path is " + cost);
 		this.shortestPath = path;
 		return path;
 	}
