@@ -52,7 +52,9 @@ public class RunAstar {
 			log.debug("Printing the path.");
 			pathFinder.printPath();
 
-		} catch (NodeException | IOException e) {
+		} catch (NodeException e) {
+			log.error(e.getMessage());
+		} catch (IOException e) {
 			log.error(e.getMessage());
 			log.error("Please run as java -jar ${jar file name} [OPTIONS]");
 			log.error("Append -f ${file} to specify the file or it'll search for map.txt in the same folder.");

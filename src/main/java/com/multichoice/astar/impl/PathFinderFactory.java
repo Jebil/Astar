@@ -18,7 +18,6 @@ public class PathFinderFactory implements IPathFinderFactory {
 	private IPathFinder pathFinder;
 	private static Logger logger = Logger.getLogger(PathFinderFactory.class);
 
-	@Override
 	public IPathFinder createPathFinder(String arg, IAreaMap map, IAStarHeuristic heuristic) {
 		if (arg.equalsIgnoreCase(Constants.AstarAlgorithm)) {
 			pathFinder = new AstarPathFinder(map, heuristic);
