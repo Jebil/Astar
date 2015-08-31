@@ -91,12 +91,12 @@ public class AstarPathFinder implements IPathFinder {
 					// add neighbor to the open list if it is not there
 					if (!openList.contains(neighbor)) {
 						openList.add(neighbor);
-						setNeighbourparams(current, neighbor, neighborCostFromStart);
+						setNeighbourParams(current, neighbor, neighborCostFromStart);
 						// if neighbor is closer to start it could also be
 						// better
 					} else if (neighborCostFromStart < current.getCostFromStart()) {
 						// set neighbors parameters if it is better
-						setNeighbourparams(current, neighbor, neighborCostFromStart);
+						setNeighbourParams(current, neighbor, neighborCostFromStart);
 					}
 				}
 			}
@@ -117,7 +117,7 @@ public class AstarPathFinder implements IPathFinder {
 	 * 
 	 *            Method to set neighbors parameters if it is better.
 	 */
-	private void setNeighbourparams(INode current, INode neighbor, float neighborCostFromStart) {
+	private void setNeighbourParams(INode current, INode neighbor, float neighborCostFromStart) {
 		// Set the previous node as current.
 		neighbor.setPreviousNode(current);
 		// Set the cost from start as calculated before.

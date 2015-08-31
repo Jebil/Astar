@@ -1,0 +1,45 @@
+
+
+The A* (A-Star) search algorithm is a path-finding algorithm with many uses, including Artificial Intelligence for games. 
+The search builds the route from tile to tile until it reaches the goal. To help choose the best possible tile the algorithm will 
+use an equation that takes into account the distance from the tile to the goal and the cost of moving to that tile.
+
+Equation used in this implementation is |x1 - x2| + |y1 - y2|
+
+You can clone it and import as existing maven project into your IDE (preferably Eclipse)
+
+#Features of this implementation 
+
+* You can run the jar from the command line as 
+			
+			<location>\Astar\jar> java -jar Astar-0.0.1.jar
+  
+  Or you can run the com.multichoice.RunAstar.java
+ 
+* You can specify an input file as 
+			
+			-f {filename}
+  
+  if not specified it will look for map.txt in the jar folder(if running jar file) 
+  or it will look for map.txt in the target folder (if running from IDE).
+  
+* You can disable diagonal movement by adding 
+			
+			-d
+  
+  By default diagonal movement is enabled.
+  
+* It is an executable jar file, just double click if there is a map.txt in the jar folder.
+
+* Output file will be in the 'out' folder
+  Depending on how you are running, it'll be in the jar or target folder.
+  
+* Output file name will be [providedFileName]-out.txt 
+  Eg: if input file is map23.txt
+      output will be map23-out.txt
+      
+#Drawbacks of this algorithm.
+
+* Input file should be in rectangular 2D matrix format.
+
+* No blank spaces can be allowed

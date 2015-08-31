@@ -19,3 +19,9 @@
 2015-08-31 13:06:48 DEBUG RunAstar:54 - Creating pathFinder via factory method.
 2015-08-31 13:06:48 DEBUG RunAstar:57 - Calculating shortest path.
 2015-08-31 13:06:48 DEBUG RunAstar:60 - Printing the path.
+2015-08-31 21:46:11 DEBUG RunAstar:32 - Inside main function
+2015-08-31 21:46:11 DEBUG ReadFile:58 - No file specified in command line arguments, trying default file name map.txt
+2015-08-31 21:46:11 ERROR RunAstar:58 - C:\Users\Home\workspace\Astar\jar\map.txt (The system cannot find the file specified)
+2015-08-31 21:46:11 ERROR RunAstar:59 - Please run as java -jar ${jar file name} [OPTIONS]
+2015-08-31 21:46:11 ERROR RunAstar:60 - Append -f ${file} to specify the file or it'll search for map.txt in the same folder.
+2015-08-31 21:46:11 ERROR RunAstar:61 - Append -d to prevent diagonal movement.
