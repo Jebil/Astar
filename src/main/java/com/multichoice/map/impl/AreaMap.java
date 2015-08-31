@@ -69,29 +69,29 @@ public class AreaMap implements IAreaMap {
 			map.add(new ArrayList<INode>());
 			for (int y = 0; y < mapHeight; y++) {
 				switch (charMap[x][y]) {
-				case obstacleNode:
+				case OBSTACLE_NODE:
 					node = nodeFactory.createNode(new XYCoordinate(x, y), 0, NodeType.OBSTACLE);
 					break;
-				case flatLand:
-					node = nodeFactory.createNode(new XYCoordinate(x, y), Constants.costFlatland, NodeType.FLATLAND);
+				case FLATLAND_NODE:
+					node = nodeFactory.createNode(new XYCoordinate(x, y), Constants.COST_FLATLAND, NodeType.FLATLAND);
 					break;
-				case startNode:
+				case START_NODE:
 					if (null != startLocation)
 						throw new MultipleStartNodesFoundException();
 					startLocation = new XYCoordinate(x, y);
-					node = nodeFactory.createNode(startLocation, Constants.costFlatland, NodeType.START);
+					node = nodeFactory.createNode(startLocation, Constants.COST_FLATLAND, NodeType.START);
 					break;
-				case goalNode:
+				case GOAL_NODE:
 					if (null != goalLocation)
 						throw new MultipleGoalNodesFoundException();
 					goalLocation = new XYCoordinate(x, y);
-					node = nodeFactory.createNode(goalLocation, Constants.costFlatland, NodeType.GOAL);
+					node = nodeFactory.createNode(goalLocation, Constants.COST_FLATLAND, NodeType.GOAL);
 					break;
-				case forestNode:
-					node = nodeFactory.createNode(new XYCoordinate(x, y), Constants.costForest, NodeType.FOREST);
+				case FOREST_NODE:
+					node = nodeFactory.createNode(new XYCoordinate(x, y), Constants.COST_FOREST, NodeType.FOREST);
 					break;
-				case mountain:
-					node = nodeFactory.createNode(new XYCoordinate(x, y), Constants.costMountain, NodeType.MOUNTAIN);
+				case MOUNTAIN_NODE:
+					node = nodeFactory.createNode(new XYCoordinate(x, y), Constants.COST_MOUNTAIN, NodeType.MOUNTAIN);
 					break;
 				}
 				map.get(x).add(node);

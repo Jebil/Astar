@@ -30,7 +30,6 @@ public class AstarPathFinder implements IPathFinder {
 	private ArrayList<INode> closedList;
 	private SortedNodeList openList;
 	private Path shortestPath;
-	private float estimatedDistanceToGoal;
 	private static Logger LOGGER = Logger.getLogger(AstarPathFinder.class);
 
 	/**
@@ -118,12 +117,13 @@ public class AstarPathFinder implements IPathFinder {
 	 *            Method to set neighbors parameters if it is better.
 	 */
 	private void setNeighbourParams(INode current, INode neighbor, float neighborCostFromStart) {
+
 		// Set the previous node as current.
 		neighbor.setPreviousNode(current);
 		// Set the cost from start as calculated before.
 		neighbor.setCostFromStart(neighborCostFromStart);
 		// Find estimated distance to goal using provided heuristic function.
-		estimatedDistanceToGoal = heuristic.getEstimatedDistanceToGoal(neighbor.getCoordinates(),
+		float estimatedDistanceToGoal = heuristic.getEstimatedDistanceToGoal(neighbor.getCoordinates(),
 				map.getGoalNode().getCoordinates());
 		// Set the heuristic cost to the neighbor.
 		neighbor.setHeuristicCostFromGoal(estimatedDistanceToGoal);
@@ -168,27 +168,27 @@ public class AstarPathFinder implements IPathFinder {
 				node = map.getNode(coordinate);
 
 				if (node.getType().equals(NodeType.OBSTACLE)) {
-					fw.write(obstacleNode);
-					System.out.print(obstacleNode);
+					fw.write(OBSTACLE_NODE);
+					System.out.print(OBSTACLE_NODE);
 				} else if (node.getType().equals(NodeType.START)) {
-					fw.write(pathSymbol);
-					System.out.print(pathSymbol);
+					fw.write(PATH_SYMBOL);
+					System.out.print(PATH_SYMBOL);
 				} else if (node.getType().equals(NodeType.GOAL)) {
-					fw.write(pathSymbol);
-					System.out.print(pathSymbol);
+					fw.write(PATH_SYMBOL);
+					System.out.print(PATH_SYMBOL);
 				} else if (shortestPath.contains(coordinate)) {
-					fw.write(pathSymbol);
-					System.out.print(pathSymbol);
+					fw.write(PATH_SYMBOL);
+					System.out.print(PATH_SYMBOL);
 				} else {
 					if (node.getType().equals(NodeType.FLATLAND)) {
-						fw.write(flatLand);
-						System.out.print(flatLand);
+						fw.write(FLATLAND_NODE);
+						System.out.print(FLATLAND_NODE);
 					} else if (node.getType().equals(NodeType.FOREST)) {
-						fw.write(forestNode);
-						System.out.print(forestNode);
+						fw.write(FOREST_NODE);
+						System.out.print(FOREST_NODE);
 					} else if (node.getType().equals(NodeType.MOUNTAIN)) {
-						fw.write(mountain);
-						System.out.print(mountain);
+						fw.write(MOUNTAIN_NODE);
+						System.out.print(MOUNTAIN_NODE);
 					}
 				}
 			}

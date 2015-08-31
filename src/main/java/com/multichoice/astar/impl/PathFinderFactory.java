@@ -15,11 +15,18 @@ import com.multichoice.map.IAreaMap;
  * 
  */
 public class PathFinderFactory implements IPathFinderFactory {
-	private IPathFinder pathFinder;
 	private static Logger LOGGER = Logger.getLogger(PathFinderFactory.class);
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.multichoice.astar.IPathFinderFactory#createPathFinder(java.lang.
+	 * String, com.multichoice.map.IAreaMap,
+	 * com.multichoice.astar.IAStarHeuristic)
+	 */
 	public IPathFinder createPathFinder(String arg, IAreaMap map, IAStarHeuristic heuristic) {
-		if (arg.equalsIgnoreCase(Constants.AstarAlgorithm)) {
+		IPathFinder pathFinder = null;
+		if (arg.equalsIgnoreCase(Constants.ASTAR_ALGORITHM)) {
 			pathFinder = new AstarPathFinder(map, heuristic);
 		}
 		LOGGER.debug("Creating new instance of " + pathFinder.getClass().getName() + " Using PathFinderFactory");

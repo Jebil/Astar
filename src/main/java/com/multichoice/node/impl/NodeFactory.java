@@ -13,7 +13,6 @@ import com.multichoice.node.coordinate.impl.XYCoordinate;
  *
  */
 public class NodeFactory implements INodeFactory {
-	Node node;
 
 	/*
 	 * (non-Javadoc)
@@ -22,7 +21,7 @@ public class NodeFactory implements INodeFactory {
 	 * coordinate.ICoordinate, int, com.multichoice.enums.NodeType)
 	 */
 	public INode createNode(ICoordinate coordinate, int cost, NodeType type) {
-		node = new Node((XYCoordinate) coordinate, cost, type);
+		INode node = new Node((XYCoordinate) coordinate, cost, type);
 		return node;
 	}
 
