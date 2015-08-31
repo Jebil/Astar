@@ -1,0 +1,16 @@
+com.multichoice
+com.multichoice.astar
+com.multichoice.astar.impl
+com.multichoice.constants
+com.multichoice.enums
+com.multichoice.exceptions
+com.multichoice.file
+com.multichoice.map
+com.multichoice.map.impl
+com.multichoice.node
+com.multichoice.node.coordinate
+com.multichoice.node.coordinate.impl
+com.multichoice.node.impl
+com.multichoice.path
+com.test.node
+com.test.node.coordinate

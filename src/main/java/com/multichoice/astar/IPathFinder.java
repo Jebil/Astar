@@ -6,10 +6,10 @@ import com.multichoice.exceptions.NodeException;
 import com.multichoice.path.Path;
 
 /**
+ * Prototype for path finding algorithm.
+ * 
  * @author Jebil Kuruvila
  *
- *
- *         Prototype for path finding algorithm.
  */
 public interface IPathFinder {
 	/**

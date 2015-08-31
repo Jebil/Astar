@@ -4,9 +4,10 @@ import com.multichoice.enums.NodeType;
 import com.multichoice.node.coordinate.ICoordinate;
 
 /**
+ * Factory prototype for NodeFactory
+ * 
  * @author Jebil Kuruvila
  * 
- *         Factory prototype for NodeFactory
  */
 public interface INodeFactory {
 

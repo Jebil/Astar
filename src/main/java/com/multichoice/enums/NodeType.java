@@ -1,9 +1,9 @@
 package com.multichoice.enums;
 
 /**
- * @author Jebil Kuruvila
+ * Holds the type of the node.
  * 
- *         Holds the type of the node.
+ * @author Jebil Kuruvila
  *
  */
 public enum NodeType {

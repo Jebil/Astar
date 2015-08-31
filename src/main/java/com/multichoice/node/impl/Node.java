@@ -6,9 +6,10 @@ import com.multichoice.node.coordinate.ICoordinate;
 import com.multichoice.node.coordinate.impl.XYCoordinate;
 
 /**
+ * Implementation of the type Node in two dimension.
+ * 
  * @author Jebil Kuruvila
  * 
- *         Implementation of the type Node in two dimension.
  */
 public class Node implements INode {
 	private int cost;

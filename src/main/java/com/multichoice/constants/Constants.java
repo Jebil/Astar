@@ -1,19 +1,22 @@
 package com.multichoice.constants;
 
 /**
+ * Holder of all constant values.
+ * 
  * @author Jebil Kuruvila
  *
- *
- *         Holder of all constant values.
  */
 public class Constants {
-	public static char startNode = '@';
-	public static char goalNode = 'X';
-	public static char obstacleNode = '~';
+	public static final char startNode = '@';
+	public static final char goalNode = 'X';
+	public static final char obstacleNode = '~';
+	public static final char forestNode = '*';
+	public static final char flatLand = '.';
+	public static final char mountain = '^';
 	public static int costFlatland = 1;
 	public static int costForest = 2;
 	public static int costMountain = 3;
-	public static char pathSymbol = '#';
+	public static final char pathSymbol = '#';
 	public static String AstarAlgorithm = "astar";
 	public static String ManhattanHeuristic = "manhattan";
 }

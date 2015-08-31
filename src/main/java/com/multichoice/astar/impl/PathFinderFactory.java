@@ -9,10 +9,10 @@ import com.multichoice.constants.Constants;
 import com.multichoice.map.IAreaMap;
 
 /**
+ * Factory implementation for creating path finder algorithm.
+ * 
  * @author Jebil Kuruvila
  * 
- * 
- *         Factory implementation for creating path finder algorithm.
  */
 public class PathFinderFactory implements IPathFinderFactory {
 	private IPathFinder pathFinder;

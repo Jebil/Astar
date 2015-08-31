@@ -1,10 +1,10 @@
 package com.multichoice.node.coordinate;
 
 /**
+ * Type for holding the coordinates of the Node.
+ * 
  * @author Jebil Kuruvila
  *
- * 
- *         Type for holding the coordinates of the Node.
  */
 public interface ICoordinate {
 	/**

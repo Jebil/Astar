@@ -3,9 +3,10 @@ package com.multichoice.node.coordinate.impl;
 import com.multichoice.node.coordinate.ICoordinate;
 
 /**
+ * Two dimensional implementation for the ICoordinate.
+ * 
  * @author Jebil Kuruvila
  *
- *         Two dimensional implementation for the ICoordinate.
  */
 public class XYCoordinate implements ICoordinate {
 	private int x;

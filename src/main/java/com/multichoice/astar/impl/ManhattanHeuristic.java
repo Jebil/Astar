@@ -5,11 +5,11 @@ import com.multichoice.node.coordinate.ICoordinate;
 import com.multichoice.node.coordinate.impl.XYCoordinate;
 
 /**
+ * Implementation of AStarHeuristic interface using Manhattan distance formula
+ * |x1 - x2| + |y1 - y2|
+ * 
  * @author Jebil Kuruvila
  *
- *
- *         Implementation of AStarHeuristic interface using Manhattan distance
- *         formula |x1 - x2| + |y1 - y2|
  */
 public class ManhattanHeuristic implements IAStarHeuristic {
 	int startX, startY, goalX, goalY;
@@ -30,9 +30,4 @@ public class ManhattanHeuristic implements IAStarHeuristic {
 		return (Math.abs(startX - goalX) + Math.abs(startY - goalY));
 	}
 
-	/**
-	 * Making the constructor available only for factory.
-	 */
-	protected ManhattanHeuristic() {
-	}
 }

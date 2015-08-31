@@ -1,9 +1,12 @@
 package com.multichoice.exceptions;
 
+/**
+ * Base class for all node exceptions.
+ * 
+ * @author Jebil Kuruvila
+ *
+ */
 public class NodeException extends Exception {
-	/**
-	 * Base class for all node exceptions.
-	 */
 	public NodeException(String string) {
 		super(string);
 	}

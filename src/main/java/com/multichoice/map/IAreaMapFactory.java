@@ -3,10 +3,11 @@ package com.multichoice.map;
 import com.multichoice.exceptions.NodeException;
 
 /**
+ * Prototype for the AreaMap factory
+ * 
  * @author Jebil Kuruvila
  *
  *
- *         Prototype for the AreaMap factory
  */
 public interface IAreaMapFactory {
 	/**
@@ -14,5 +15,6 @@ public interface IAreaMapFactory {
 	 * @return
 	 * @throws NodeException
 	 */
-	public IAreaMap createAreaMap(char[][] map) throws NodeException;
+	public IAreaMap createAreaMap(char[][] map, boolean diagonalMovement) throws NodeException;
+
 }

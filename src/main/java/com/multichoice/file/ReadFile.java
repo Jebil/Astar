@@ -10,9 +10,10 @@ import java.util.ArrayList;
 import org.apache.log4j.Logger;
 
 /**
+ * Wrapper for all the file operations.
+ * 
  * @author Jebil Kuruvila
  *
- *         Wrapper for all the file operations.
  */
 public class ReadFile {
 	private static Logger logger = Logger.getLogger(ReadFile.class);

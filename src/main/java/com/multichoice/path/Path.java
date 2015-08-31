@@ -6,12 +6,15 @@ import com.multichoice.node.INode;
 import com.multichoice.node.coordinate.impl.XYCoordinate;
 
 /**
+ * Type used to hold the path.
+ * 
  * @author Jebil Kuruvila
  *
- *         Type used to hold the path.
  */
 public class Path {
-	// The waypoints in the path (list of coordiantes making up the path)
+	/**
+	 * The waypoints in the path (list of coordiantes making up the path)
+	 */
 	private ArrayList<INode> waypoints = new ArrayList<INode>();
 
 	public Path() {
@@ -21,6 +24,10 @@ public class Path {
 		return waypoints.size();
 	}
 
+	/**
+	 * @param index
+	 * @return
+	 */
 	public INode getWayPoint(int index) {
 		return waypoints.get(index);
 	}
@@ -50,10 +57,7 @@ public class Path {
 	/**
 	 * Append a waypoint to the path.
 	 * 
-	 * @param x
-	 *            The x coordinate of the waypoint.
-	 * @param y
-	 *            The y coordinate of the waypoint.
+	 * @param n
 	 */
 	public void appendWayPoint(INode n) {
 		waypoints.add(n);
@@ -62,10 +66,7 @@ public class Path {
 	/**
 	 * Add a waypoint to the beginning of the path.
 	 * 
-	 * @param x
-	 *            The x coordinate of the waypoint.
-	 * @param y
-	 *            The y coordinate of the waypoint.
+	 * @param n
 	 */
 	public void prependWayPoint(INode n) {
 		waypoints.add(0, n);
@@ -74,11 +75,8 @@ public class Path {
 	/**
 	 * Check if this path contains the WayPoint
 	 * 
-	 * @param x
-	 *            The x coordinate of the waypoint.
-	 * @param y
-	 *            The y coordinate of the waypoint.
-	 * @return True if the path contains the waypoint.
+	 * @param coordinate
+	 * @return
 	 */
 	public boolean contains(XYCoordinate coordinate) {
 		for (INode node : waypoints) {

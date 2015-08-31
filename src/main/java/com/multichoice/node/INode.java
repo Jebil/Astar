@@ -4,10 +4,10 @@ import com.multichoice.enums.NodeType;
 import com.multichoice.node.coordinate.ICoordinate;
 
 /**
+ * Type for storing each tile data in the map
+ * 
  * @author Jebil Kuruvila
  *
- *
- *         Type for storing each tile data in the map
  */
 public interface INode extends Comparable<INode> {
 	/**
